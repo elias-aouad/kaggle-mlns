@@ -219,6 +219,7 @@ predictions_SVM = list(classifier.predict(testing_features))
 
 improved_predictions_path = os.path.join(parent_dir, "improved_predictions.csv")
 
+
 idx = list(range(len(predictions_SVM)))
 preds_data = np.array([idx, predictions_SVM]).T
 preds = pd.DataFrame(data=preds_data, columns=['id', 'category'])
