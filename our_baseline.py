@@ -217,9 +217,6 @@ testing_features = preprocessing.scale(testing_features)
 # issue predictions
 predictions_SVM = list(classifier.predict(testing_features))
 
-# write predictions to .csv file suitable for Kaggle (just make sure to add the column names)
-predictions_SVM = zip(range(len(testing_set)), predictions_SVM)
-
 improved_predictions_path = os.path.join(parent_dir, "improved_predictions.csv")
 
 idx = list(range(len(predictions_SVM)))
